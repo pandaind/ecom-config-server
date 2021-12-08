@@ -5,11 +5,11 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/pandaind/ecom-configs
+          uri: ${GIT_REPOSITORY_URL} #https://github.com/pandaind/ecom-configs
           clone-on-start: true
           default-label: main
   kafka:
-    bootstrap-servers: http://localhost:9092
+    bootstrap-servers: ${KAFKA_SERVERS_URLS}
 
 server:
   port: 8888

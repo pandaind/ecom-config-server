@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: ./target/configFolder
+          clone-on-start: false
+          default-label: main
+  kafka:
+    bootstrap-servers: ${KAFKA_SERVERS_URLS:http://localhost:9092}
+
+server:
+  port: 8888
+
+debug: ${DEBUG:false}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh

@@ -9,8 +9,8 @@ spring:
           clone-on-start: true
           default-label: main
 
-#  kafka:
-#    bootstrap-servers: ${KAFKA_SERVERS_URLS:http://localhost:9092}
+  kafka:
+    bootstrap-servers: ${KAFKA_SERVERS_URLS:http://localhost:9092}
 
 server:
   port: 8888
